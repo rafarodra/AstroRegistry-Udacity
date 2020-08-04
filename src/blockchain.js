@@ -139,7 +139,7 @@ class Blockchain {
             const messageTime = parseInt(message.split(':')[1]); 
             const currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
             const timeDifference = currentTime - messageTime; 
-            const fiveMinutes = 300000; //five minutes in seconds
+            const fiveMinutes = 300; //five minutes in seconds
 
             if(timeDifference > fiveMinutes){
                 reject(Error("Too much time"));
